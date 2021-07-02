@@ -12,9 +12,9 @@ then
 fi
 
 # init params
-app=$2
-server=$3
-comment="`git config -l | grep -e 'user.name=.*' -o | sed 's/user.name=//g'` $4 [by publish.sh]"
+app=$1
+server=$2
+comment="`git config -l | grep -e 'user.name=.*' -o | sed 's/user.name=//g'` $3 [by publish.sh]"
 tgz="${server}.tgz"
 
 echo "the publishing comment is \"${comment}\""
